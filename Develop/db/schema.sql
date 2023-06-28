@@ -20,13 +20,13 @@ FOREIGN KEY (category_id)REFERENCES category (id)
 
 CREATE TABLE tag (
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    tag_name VARCHAR (50),
+    tag_name VARCHAR (50)
 );
 
 CREATE TABLE productTag (
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     product_id INT NOT NULL,
     tag_id INT NOT NULL,
-    FOREIGN KEY (product_id)REFERENCES product (id)
+    FOREIGN KEY (product_id)REFERENCES product (id),
     FOREIGN KEY (tag_id)REFERENCES tag (id)
 );
